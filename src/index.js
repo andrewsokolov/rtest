@@ -1,10 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import { app } from './reducers'
+import ReduxThunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { ThemeProvider } from 'emotion-theming'
+import theme from '@rebass/preset'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(app, composeWithDevTools(
+  applyMiddleware(ReduxThunk)
+))
+
+ReactDOM.render(
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

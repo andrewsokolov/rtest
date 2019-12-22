@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+Object {
+  "activeSection": "source",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "GBP",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": 0,
+    "target": 0,
+  },
+}
+`;
+
+exports[`renders learn react link 2`] = `
+Object {
+  "activeSection": "source",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "GBP",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": 20,
+    "target": 0,
+  },
+}
+`;
+
+exports[`renders learn react link 3`] = `
+Object {
+  "activeSection": "source",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "GBP",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": 20,
+    "target": 20,
+  },
+}
+`;
+
+exports[`renders learn react link 4`] = `
+Object {
+  "activeSection": "source",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "USD",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": 20,
+    "target": 20,
+  },
+}
+`;
+
+exports[`renders learn react link 5`] = `
+Object {
+  "activeSection": "source",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "USD",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": 20,
+    "target": 20,
+  },
+}
+`;
+
+exports[`renders learn react link 6`] = `
+Object {
+  "activeSection": "source",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "USD",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": 100,
+    "target": "110.00",
+  },
+}
+`;
+
+exports[`renders learn react link 7`] = `
+Object {
+  "activeSection": "target",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "USD",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": "181.82",
+    "target": 200,
+  },
+}
+`;
+
+exports[`renders learn react link 8`] = `
+Object {
+  "activeSection": "source",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "USD",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": "181.82",
+    "target": "200.00",
+  },
+}
+`;
+
+exports[`renders learn react link 9`] = `
+Object {
+  "activeSection": "target",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "USD",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": "181.82",
+    "target": "200.00",
+  },
+}
+`;
+
+exports[`renders learn react link 10`] = `
+Object {
+  "activeSection": "source",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "USD",
+    "target": "EUR",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": "200.00",
+    "target": "200.00",
+  },
+}
+`;
+
+exports[`renders learn react link 11`] = `
+Object {
+  "activeSection": "target",
+  "balance": Object {
+    "EUR": 0,
+    "GBP": 100,
+    "USD": 0,
+  },
+  "currencies": Object {
+    "source": "EUR",
+    "target": "USD",
+  },
+  "exchange": Object {
+    "base": "EUR",
+    "rates": Object {
+      "EUR": 1,
+      "GBP": 1.2,
+      "USD": 1.1,
+    },
+  },
+  "values": Object {
+    "source": "181.82",
+    "target": "200.00",
+  },
+}
+`;
