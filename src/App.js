@@ -1,11 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button, Flex } from 'rebass';
-import { changeInputValue, exchange, fetchExchangeRates, setEditableValue, switchSections } from './actions';
+import { changeInputValue, exchange, fetchExchangeRates, setEditableValue, switchSections, selectCurrency } from './actions';
 import { SeparatorBox } from './components/SeparatorBox';
 import { SourceBox } from './components/SourceBox';
 import { TargetBox } from './components/TargetBox';
 import { checkIsValidNumber, cleanValue, formatValue } from './utils';
+import styled from 'styled-components';
+import { Normalize } from 'styled-normalize';
+
+const Screen = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1px #dee1e3;
+  border-radius: 4px;
+  width: 400px;
+  padding: 10px;
+  height: 540px;
+`;
 
 class App extends React.Component {
   componentDidMount() {
@@ -26,7 +39,18 @@ class App extends React.Component {
   }
 
   render() {
-    return <StatelessApp {...this.props} />
+    return (
+      <React.Fragment>
+        <Normalize />
+        <Flex justifyContent="center" alignItems="center" sx={{
+          height: "100vh",
+        }}>
+          <Screen>
+            <StatelessApp {...this.props} />
+          </Screen>
+        </Flex >
+      </React.Fragment>
+    )
   }
 }
 
@@ -38,46 +62,6 @@ function StatelessApp(props) {
       <TargetBox {...props} />
       <Button onClick={props.exchangeMoney}>exchange</Button>
     </Flex>
-
-
-
-    // <div className="App vertical-block">
-    //   <div className="horizontal-block">
-
-
-
-
-    //     <div>
-
-
-    //       <div>{props.from}</div>
-    //       <div>Balance: {props.balance[props.from]}</div>
-    //     </div>
-    //     <div>
-    //       <CurrencyInput value={props.values.from} onChange={(value) => props.setInputValue(value, "from")} />
-    //     </div>
-    //   </div>
-
-    //   <div className="block-separator">
-    //     <button onClick={() => props.switchAccounts(props.from, props.to)}>switch</button>  
-    //     <span>Exchange rate: {props.exchange.rates[props.to]}</span>
-    //   </div>
-
-    //   <div className="horizontal-block">
-    //     <div>
-    //       <div>{props.to}</div>
-    //       <div>Balance: {props.balance[props.to]}</div>
-    //     </div>
-    //     <div>
-    //       <CurrencyInput value={props.values.to} onChange={(value) => props.setInputValue(value, "to")} />
-    //     </div>
-    //   </div>
-
-    //   <div className="block">
-    //     <button onClick={() => props.exchangeMoney(props.from, props.to, props.exchange.rates[props.to])}>exchange</button>
-    //   </div>
-
-    // </div>
   );
 }
 
@@ -125,6 +109,13 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
+    selectCurrency: (evt) => {
+      dispatch(selectCurrency(
+        evt.target.value,
+        evt.target.name
+      ))
+
+    },
     fetchExchangeRates: (base) => {
       dispatch(fetchExchangeRates(base))
     },

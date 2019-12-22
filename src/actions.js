@@ -45,7 +45,16 @@ export function setActiveSection(section) {
 }
 
 export function selectCurrency(currency, section) {
-    return { type: SELECT_CURRENCY, payload: { currency, section } }
+    return (dispatch, getState) => {
+        const oppositeSection = section === TYPES.TARGET ? TYPES.SOURCE : TYPES.TARGET
+        const oppositeCurrency = getState().currencies[oppositeSection]
+        dispatch({ type: SELECT_CURRENCY, payload: { currency, section } })
+        if (oppositeCurrency !== currency) {
+            return
+        }
+        const newOppositeCurrency = currency !== "EUR" ? "EUR" : "USD";
+        dispatch({ type: SELECT_CURRENCY, payload: { currency: newOppositeCurrency, section: oppositeSection } })
+    }
 }
 
 export function changeInputValue(value, section) {

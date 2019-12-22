@@ -4,32 +4,33 @@ import { Box, Flex } from 'rebass'
 import { Currencies } from "../constants"
 
 export function SourceBox(props) {
-    return (
-        <Box>
+  return (
+    <Box>
       <Flex>
-          <Box width={1/2}>
-            <Select
-              id='from'
-              name='from'
-              value={props.currencies.source}
-              defaultValue={props.currencies.source}>
-              {Object.entries(Currencies).map(([index, currency]) => (
-                <option
-                  key={index}>
-                  {currency}
-                </option>
-              ))}
-            </Select>
-          </Box>
-          <Box width={1}>
-            <Input
-              id='email'
-              name='email'
-              onFocus={() => props.setActiveSection("source")}
-              onChange={(evt) => props.setInputValue(parseInt(evt.target.value, 10), "source")}
-              value={props.values.source}
-            />
-          </Box>
+        <Box width={1 / 2}>
+          <Select
+            id='source'
+            name='source'
+            onChange={props.selectCurrency}
+            value={props.currencies.source}
+            defaultValue={props.currencies.source}>
+            {Object.entries(Currencies).map(([index, currency]) => (
+              <option
+                key={index}>
+                {currency}
+              </option>
+            ))}
+          </Select>
+        </Box>
+        <Box width={1}>
+          <Input
+            id='email'
+            name='email'
+            onFocus={() => props.setActiveSection("source")}
+            onChange={(evt) => props.setInputValue(parseInt(evt.target.value, 10), "source")}
+            value={props.values.source}
+          />
+        </Box>
       </Flex>
       <Flex>
         <Box>
@@ -37,5 +38,5 @@ export function SourceBox(props) {
         </Box>
       </Flex>
     </Box>
-    )
+  )
 }
